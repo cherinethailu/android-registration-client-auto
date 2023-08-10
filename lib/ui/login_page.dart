@@ -184,10 +184,10 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
     
+    syncProvider.setIsGlobalSyncInProgress(true);
     await syncProvider.getLastSyncTime();
     debugPrint(syncProvider.lastSuccessfulSyncTime);
-    if (isTrue && syncProvider.lastSuccessfulSyncTime == "LastSyncTimeIsNull") {
-      syncProvider.setIsGlobalSyncInProgress(true);
+    if (syncProvider.lastSuccessfulSyncTime == "LastSyncTimeIsNull") {
       await _autoSyncHandler();
     } 
     else

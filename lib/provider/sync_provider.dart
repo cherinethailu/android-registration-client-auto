@@ -63,7 +63,7 @@ class SyncProvider with ChangeNotifier {
         .then((Sync getAutoSync) async {
       setCurrentProgressType(getAutoSync.syncType!);
       if (getAutoSync.errorCode == "") {
-        _policyKeySyncSuccess = true;
+        _globalParamsSyncSuccess = true;
         _currentSyncProgress = getAutoSync.syncProgress!;
         notifyListeners();
       } else {
@@ -75,7 +75,7 @@ class SyncProvider with ChangeNotifier {
           .then((Sync getAutoSync) async {
         setCurrentProgressType(getAutoSync.syncType!);
         if (getAutoSync.errorCode == "") {
-          _globalParamsSyncSuccess = true;
+          _masterDataSyncSuccess = true;
           _currentSyncProgress = getAutoSync.syncProgress!;
           notifyListeners();
 
@@ -113,7 +113,7 @@ class SyncProvider with ChangeNotifier {
                 .then((Sync getAutoSync) {
               setCurrentProgressType(getAutoSync.syncType!);
               if (getAutoSync.errorCode == "") {
-                _masterDataSyncSuccess = true;
+                _policyKeySyncSuccess = true;
                 _currentSyncProgress = getAutoSync.syncProgress!;
                 notifyListeners();
       

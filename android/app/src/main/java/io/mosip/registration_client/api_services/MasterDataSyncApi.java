@@ -177,10 +177,10 @@ public class MasterDataSyncApi implements MasterDataSyncPigeon.SyncApi {
                         result.success(syncResult("GlobalParamsSync", 1, ""));
                         return;
                     } else
-                    result.success(syncResult("GlobalParamsSync", 1, "global_params_sync_failed"));
+                        result.success(syncResult("GlobalParamsSync", 1, "global_params_sync_failed"));
                     return;
                 } else
-                result.success(syncResult("GlobalParamsSync", 1, "global_params_sync_failed"));
+                    result.success(syncResult("GlobalParamsSync", 1, "global_params_sync_failed"));
                 return;
             }
 
@@ -258,10 +258,10 @@ public class MasterDataSyncApi implements MasterDataSyncPigeon.SyncApi {
                         result.success(syncResult("UserDetailsSync", 3, ""));
                         return;
                     } else
-                    result.success(syncResult("UserDetailsSync", 3, "user_details_sync_failed"));
+                        result.success(syncResult("UserDetailsSync", 3, "user_details_sync_failed"));
                     return;
                 } else
-                result.success(syncResult("UserDetailsSync", 3, "user_details_sync_failed"));
+                    result.success(syncResult("UserDetailsSync", 3, "user_details_sync_failed"));
                 return;
             }
 
@@ -304,7 +304,7 @@ public class MasterDataSyncApi implements MasterDataSyncPigeon.SyncApi {
                         Log.e(TAG, "Failed to save IDSchema", e);
                     }
                 } else
-                result.success(syncResult("LatestIDSchemaSync", 4, "id_schema_sync_failed"));
+                    result.success(syncResult("LatestIDSchemaSync", 4, "id_schema_sync_failed"));
 
             }
 
@@ -361,10 +361,10 @@ public class MasterDataSyncApi implements MasterDataSyncPigeon.SyncApi {
                             return;
                         }
                     } else
-                    result.success(syncResult("MasterDataSync", 2, "master_data_sync_failed"));
+                        result.success(syncResult("MasterDataSync", 2, "master_data_sync_failed"));
                     return;
                 } else
-                result.success(syncResult("MasterDataSync", 2, "master_data_sync_failed"));
+                    result.success(syncResult("MasterDataSync", 2, "master_data_sync_failed"));
                 return;
             }
 
